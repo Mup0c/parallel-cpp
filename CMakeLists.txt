@@ -3,4 +3,8 @@ project(parallel)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(parallel main.cpp)
+find_package(benchmark REQUIRED)
+
+
+add_executable(benchmark benchmark.cpp)
+target_link_libraries(benchmark benchmark::benchmark)
